@@ -1,0 +1,43 @@
+:root {
+  --mainFont: "Lato", sans-serif;
+  --headingFont: "Dancing Script", cursive;
+  --colorPrimary: #025b2a;
+  --colorSecondary: #ddbd68;
+  --fontColor: #00341c;
+  --fontColor-secondary: #4d4d4d;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+* {
+  font-family: var(--mainFont);
+  color: var(--fontColor);
+}
+
+main {
+  display: none;
+}
+
+.container {
+  padding: 0 8%;
+  max-width: 1460px;
+}
+
+.primaryButton {
+  display: block;
+  width: fit-content;
+  border: none;
+  background: var(--colorPrimary);
+  padding: 12px 20px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin: 30px auto;
+}

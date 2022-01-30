@@ -1,0 +1,27 @@
+@import "global.css";
+
+nav ul {
+  font-size: 0.75rem;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding-left: 0;
+  border-bottom: 0.5px solid grey;
+  padding: 16px 0;
+  text-transform: uppercase;
+}
+
+.headingCta {
+  margin: 100px 0;
+  text-align: center;
+}
+
+.headingCta h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.2ch;
+  font-size: 2.5rem;
+}
+
+.headingCta p {
+  color: var(--fontColor-secondary);
+}
