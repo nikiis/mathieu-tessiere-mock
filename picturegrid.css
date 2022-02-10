@@ -1,0 +1,56 @@
+@import "global.css";
+
+.pictureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 10px;
+  grid-template-areas:
+    ". . . . ."
+    ". . . . .";
+}
+
+.image img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.image1 {
+  grid-column: 1 / span 1;
+  grid-row: 2;
+  margin-top: -50%;
+}
+
+.image2 {
+  grid-column: 2 / span 1;
+  grid-row: 1;
+}
+
+.image3 {
+  grid-column: 2 / span 1;
+  grid-row: 2;
+}
+
+.image4 {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
+  place-self: center;
+}
+
+.image5 {
+  grid-column: 4 / span 1;
+  grid-row: 1;
+}
+
+.image6 {
+  grid-column: 5 / span 1;
+  grid-row: 2;
+  margin-top: -50%;
+}
+
+.image7 {
+  grid-column: 4 / span 1;
+  grid-row: 2;
+}

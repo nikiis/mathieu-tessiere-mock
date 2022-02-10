@@ -41,3 +41,8 @@ main {
   font-size: 0.75rem;
   margin: 30px auto;
 }
+
+.test {
+  min-height: 100vh;
+  background-color: black;
+}
