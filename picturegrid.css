@@ -1,8 +1,15 @@
 @import "global.css";
 
+:root {
+  --main-picture-grid-space: 2fr;
+  --side-picture-grid-space: 1fr;
+}
+
 .pictureGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-columns:
+    var(--side-picture-grid-space) var(--side-picture-grid-space)
+    var(--main-picture-grid-space) var(--side-picture-grid-space) var(--side-picture-grid-space);
   grid-template-rows: 1fr 1fr;
   row-gap: 20px;
   column-gap: 10px;
@@ -37,6 +44,7 @@
   grid-column: 3 / span 1;
   grid-row: 1 / span 2;
   place-self: center;
+  transition: all ease-in-out 0.3s;
 }
 
 .image5 {
@@ -54,3 +62,8 @@
   grid-column: 4 / span 1;
   grid-row: 2;
 }
+
+/* .sideImage img {
+  width: 300px;
+  height: 400px;
+} */

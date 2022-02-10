@@ -3,8 +3,16 @@
   --headingFont: "Dancing Script", cursive;
   --colorPrimary: #025b2a;
   --colorSecondary: #ddbd68;
+  --colorBackground: #faf8f5;
   --fontColor: #00341c;
   --fontColor-secondary: #4d4d4d;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--colorBackground);
 }
 
 @keyframes slide-in {
@@ -28,6 +36,7 @@ main {
 .container {
   padding: 0 8%;
   max-width: 1460px;
+  margin: 0 auto;
 }
 
 .primaryButton {
@@ -40,6 +49,7 @@ main {
   text-transform: uppercase;
   font-size: 0.75rem;
   margin: 30px auto;
+  text-decoration: none;
 }
 
 .test {
