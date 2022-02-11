@@ -18,8 +18,8 @@
 }
 
 .loadingScreen h1 {
-  font-family: var(--headingFont);
-  color: var(--colorSecondary);
+  font-family: var(--heading-font);
+  color: var(--color-mediumgold);
   font-size: 4rem;
   text-decoration: underline;
 }
@@ -35,12 +35,12 @@
   background-image: linear-gradient(
     0deg,
     #ffffff 50%,
-    var(--colorSecondary) 0%,
-    var(--colorSecondary) 50%,
+    var(--color-mediumgold) 0%,
+    var(--color-mediumgold) 50%,
     #ffffff 50%,
     #ffffff 75%,
-    var(--colorSecondary) 75%,
-    var(--colorSecondary) 100%
+    var(--color-mediumgold) 75%,
+    var(--color-mediumgold) 100%
   );
   background-size: 100% 30px;
 }
@@ -51,6 +51,6 @@
   width: 100vw;
   position: absolute;
   bottom: 0;
-  background-color: var(--colorPrimary);
+  background-color: var(--color-mediumgreen);
   animation: 2s slide-in calc(300ms + 2s) none;
 }

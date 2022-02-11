@@ -8,25 +8,20 @@ const videoText = document.querySelector(".middleVideo .text");
 
 function scrollEffect() {
   // observer
-  const options = {
-    root: document.querySelector("body"),
-    rootMargin: "0px",
-    threshold: 1,
-  };
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        document.addEventListener("scroll", moveSidePanes);
+        document.addEventListener("scroll", moveSidePanes, true);
+      } else {
+        document.removeEventListener("scroll", moveSidePanes, true);
       }
     });
-  }, options);
+  });
 
   observer.observe(scrollEffectWrapper);
 
   function moveSidePanes() {
-    console.log("SCROLL TOP SCROLL EFFECT", video.getBoundingClientRect().top);
-    // console.log("SCROLL TOP WINDOW", window.scroll);
+    // console.log("SCROLL TOP SCROLL EFFECT", video.getBoundingClientRect().top);
 
     // show text when video reaches certain scroll point
     showVideoText();
@@ -45,7 +40,7 @@ function setVariable(variableName, variableValue, variableUnit) {
 }
 
 function showVideoText() {
-  if (video.getBoundingClientRect().top <= 50) {
+  if (video.getBoundingClientRect().top <= 100) {
     videoText.style.opacity = 1;
   } else {
     videoText.style.opacity = 0;

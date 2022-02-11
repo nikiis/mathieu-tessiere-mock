@@ -3,7 +3,7 @@
 :root {
   --left-pane-translateX: 0;
   --right-pane-translateX: 0;
-  --main-pane-translateY: 30px;
+  --main-pane-translateY: 80px;
 }
 
 .scrollEffectWrapper {
@@ -12,10 +12,18 @@
   overflow: hidden;
 }
 
-.scrollEffectWrapper img {
+.scrollEffectWrapper .leftSide img,
+.rightSide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.scrollEffectWrapper .logoText {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .middleVideo {
@@ -51,7 +59,7 @@ span {
 }
 
 .middleVideo .text span {
-  font-family: var(--headingFont);
+  font-family: var(--heading-font);
   font-weight: bold;
 }
 
@@ -65,7 +73,7 @@ span {
 .rightSide {
   top: 0;
   position: absolute;
-  background-color: var(--colorBackground);
+  background-color: var(--color-bg-lightbeige);
   display: grid;
   column-gap: 50px;
   row-gap: 40px;

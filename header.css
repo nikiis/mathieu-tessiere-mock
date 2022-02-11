@@ -1,27 +1,61 @@
 @import "global.css";
 
 nav ul {
-  font-size: 0.75rem;
+  font-size: 1rem;
   display: flex;
   list-style: none;
   justify-content: space-between;
   padding-left: 0;
-  border-bottom: 0.5px solid grey;
   padding: 16px 0;
   text-transform: uppercase;
+  position: relative;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.logo img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .headingCta {
-  margin: 100px 0;
+  margin: 88px 0;
   text-align: center;
 }
 
 .headingCta h1 {
   text-transform: uppercase;
   letter-spacing: 0.2ch;
-  font-size: 3.5rem;
+  font-size: 4.125rem;
+  color: var(--color-darkgreen);
+  letter-spacing: 0.06em;
+  font-family: var(--heading-font);
+  margin-bottom: 1rem;
 }
 
 .headingCta p {
-  color: var(--fontColor-secondary);
+  color: var(--color-grey);
+  font-size: 1.5rem;
+}
+
+.headingCta .ctaBtns {
+  padding-top: 47px;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+.headingCta .ctaBtns .primaryButton {
+  min-width: 180px;
+  border-radius: 30px;
 }
