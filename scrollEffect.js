@@ -1,34 +1,39 @@
-// local variables
-const scrollEffectWrapper = document.querySelector(".scrollEffectWrapper");
-const leftSidePane = document.querySelector(".scrollEffectWrapper .leftSide");
-const rightSidePane = document.querySelector(".scrollEffectWrapper .rightSide");
+window.addEventListener("DOMContentLoaded", scrollEffect);
 
-const variables = document.querySelector(":root");
+function scrollEffect() {
+  // local variables
+  const scrollEffectWrapper = document.querySelector(".scrollEffectWrapper");
 
-// observer
-const options = {
-  threshold: 1,
-};
+  const variables = document.querySelector(":root");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      document.addEventListener("scroll", moveSidePanes);
-    }
-  });
-}, options);
+  // observer
+  const options = {
+    threshold: 1,
+  };
 
-observer.observe(scrollEffectWrapper);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        document.addEventListener("scroll", moveSidePanes);
+      }
+    });
+  }, options);
 
-function moveSidePanes() {
-  let leftSideTranslate = window.scrollY * -1;
-  let rightSideTranslate = window.scrollY;
+  observer.observe(scrollEffectWrapper);
 
-  setVariable("--left-pane-translateX", leftSideTranslate, "px");
-  setVariable("--right-pane-translateX", rightSideTranslate, "px");
-}
+  function moveSidePanes() {
+    let leftSideTranslate = window.scrollY * -1;
+    let rightSideTranslate = window.scrollY;
 
-// Helper functions
-function setVariable(variableName, variableValue, variableUnit) {
-  variables.style.setProperty(variableName, `${variableValue}${variableUnit}`);
+    setVariable("--left-pane-translateX", leftSideTranslate, "px");
+    setVariable("--right-pane-translateX", rightSideTranslate, "px");
+  }
+
+  // Helper functions
+  function setVariable(variableName, variableValue, variableUnit) {
+    variables.style.setProperty(
+      variableName,
+      `${variableValue}${variableUnit}`
+    );
+  }
 }
