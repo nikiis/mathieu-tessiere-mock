@@ -9,6 +9,8 @@ const videoText = document.querySelector(".middleVideo .text");
 function scrollEffect() {
   // observer
   const options = {
+    root: document.querySelector("body"),
+    rootMargin: "0px",
     threshold: 1,
   };
 
